@@ -42,6 +42,7 @@ const Navbar = () => {
         <div className='navbar-right-container'>
           <div className='navbar-cart-active' onClick={()=>setToggleCart(!toggleCart)}>
             <ShoppingCartOutlinedIcon />
+            <span>1</span>
             { toggleCart && <div className='navbar-cart'>
                 {/* <Cart /> */}
               </div>
