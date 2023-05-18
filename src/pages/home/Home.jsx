@@ -1,11 +1,11 @@
 import React from 'react'
-import Header from '../../components/header/Header'
-import './home.css'
+import { Header, FeaturedProducts} from './../../components'
 
 const Home = () => {
   return (
     <div>
       <Header />
+      <FeaturedProducts />
     </div>
   )
 }
