@@ -40,7 +40,7 @@
 }
 .navbar-menu{
   position: absolute;
-  
+  z-index: 100;
   border: 1px rgb(97, 134, 119) solid;
   background-color: white;
   width: 150px;
@@ -76,7 +76,8 @@
   position: absolute;
   border: 1px rgb(97, 134, 119) solid;
   top: 20px;
-  right: 0px
+  right: 0px;
+  z-index: 100;
 }
 
 span {

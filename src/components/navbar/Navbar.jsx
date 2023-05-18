@@ -7,10 +7,10 @@ import './navbar.css'
 const Menu =()=>{
   return(
   <div className='menu-container-category'>
-    <div className='menu-item-category'><Link to='/products/1'>Living Room</Link></div>
-    <div className='menu-item-category'><Link to='/products/2'>Kitchen</Link></div>
-    <div className='menu-item-category'><Link to='/products/3'>Bedroom</Link></div>
-    <div className='menu-item-category'><Link to='/products/4'>Bathroom</Link></div>
+    <div className='menu-item-category'><Link to='/products/1'>Surface</Link></div>
+    <div className='menu-item-category'><Link to='/products/2'>Comfort</Link></div>
+    <div className='menu-item-category'><Link to='/products/3'>Lighting</Link></div>
+    <div className='menu-item-category'><Link to='/products/4'>Storage</Link></div>
   </div>
   )
   
