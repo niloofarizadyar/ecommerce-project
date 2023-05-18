@@ -1,11 +1,12 @@
 import React from 'react'
-import { Header, FeaturedProducts} from './../../components'
+import { Header, FeaturedProducts, Category} from './../../components'
 
 const Home = () => {
   return (
     <div>
       <Header />
       <FeaturedProducts />
+      <Category />
     </div>
   )
 }
