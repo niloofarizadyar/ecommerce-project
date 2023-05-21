@@ -1,0 +1,59 @@
+.product{
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+.product-img-container{
+    display: flex;
+    flex: 40%;
+    border: 1px black solid;
+}
+.product-img{
+    width: 100%;
+    object-fit: cover;
+    display: flex;
+    
+}
+.product-description{
+    display: flex;
+    flex: 60%;
+}
+@media (max-width: 800px) {
+    .product {
+      flex-direction: column;
+    }
+
+}
+
+.product-description{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.product-add-count{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+}
+.single-product-info{
+    padding-bottom: 10px;
+}
+.count-num{
+    font-size: 20px;
+    padding: 10px;
+}
+.count-btn{
+    padding: 10px;
+    border: none;
+    background-color: var(--color-footer);
+    color: white;
+    cursor: pointer;
+}
+.add-to-card-btn{
+    width: 50%;
+    height: 30px;
+    border: none;
+    background-color: var(--color-footer);
+    color: white;
+    cursor: pointer;
+}
