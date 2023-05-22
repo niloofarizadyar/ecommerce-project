@@ -75,9 +75,11 @@
 .navbar-cart{
   position: absolute;
   border: 1px rgb(97, 134, 119) solid;
+  background-color: white;
   top: 20px;
   right: 0px;
   z-index: 100;
+  width: 400px;
 }
 
 span {

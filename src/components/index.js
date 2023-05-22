@@ -5,3 +5,4 @@ export { default as FeaturedProducts } from './featuredProducts/FeaturedProducts
 export { default as Card } from './card/Card'
 export { default as Category } from './category/Category'
 export { default as ProductList} from './productList/ProductList'
+export { default as Cart } from './cart/Cart'

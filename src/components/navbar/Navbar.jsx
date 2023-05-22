@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import ChairRoundedIcon from '@mui/icons-material/ChairRounded';
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import {Cart} from './../../components'
 import { Link } from "react-router-dom";
 import './navbar.css'
 
@@ -44,7 +45,7 @@ const Navbar = () => {
             <ShoppingCartOutlinedIcon />
             <span>1</span>
             { toggleCart && <div className='navbar-cart'>
-                {/* <Cart /> */}
+                <Cart />
               </div>
             }
           </div>
