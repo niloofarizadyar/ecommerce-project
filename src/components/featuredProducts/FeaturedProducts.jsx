@@ -1,9 +1,16 @@
-import React from 'react'
-import { items } from './FeaturedProductsItems'
+import React,{useState, useEffect} from 'react'
 import { Card } from './../../components'
+import axios from 'axios'
 import './featuredProducts.css'
 
+
 const FeaturedProducts = () => {
+    const [data, setData] = useState(null)
+    useEffect(()=>{
+        axios.get('https://ecommerce-project-f8fc5-default-rtdb.europe-west1.firebasedatabase.app/products.json').
+        then(res => setData(res.data)).catch(err => console.log(err))
+    },[])
+    console.log(data)
   return (
     <div className='featured-products'>
         <div className='featured-products-top'>
@@ -20,7 +27,7 @@ const FeaturedProducts = () => {
         </div>
         <div className='featured-products-bottom'>
             {
-                items.map((item)=>(<Card key={item.id} item={item}/>))
+                data == null ? <p>Loading</p>:data.slice(0,4).map((item)=>(<Card key={item.id} item={item}/>))
             }
             
         </div>

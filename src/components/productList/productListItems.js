@@ -21,7 +21,7 @@ export const items = [
         id:3,
         img:Sofa,
         title: "Sofa",
-        color:"black",
+        color:"white",
         price:17,
         description:"a black and comfortable sofa with modern design"
     },
@@ -69,7 +69,7 @@ export const items = [
         id:9,
         img:Sofa,
         title: "Sofa",
-        color:"black",
+        color:"white",
         price:17,
         description:"a black and comfortable sofa with modern design"
     },
@@ -109,7 +109,7 @@ export const items = [
         id:14,
         img:Sofa,
         title: "Sofa",
-        color:"black",
+        color:"white",
         price:17,
         description:"a black and comfortable sofa with modern design"
     },
@@ -157,7 +157,7 @@ export const items = [
         id:20,
         img:Sofa,
         title: "Sofa",
-        color:"black",
+        color:"white",
         price:17,
         description:"a black and comfortable sofa with modern design"
     },

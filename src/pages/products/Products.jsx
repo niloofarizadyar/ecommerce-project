@@ -6,21 +6,22 @@ import './products.css'
 
 
 const Products = () => {
-  const [toggleMenu, setToggleMenu] = useState(false)
+  // const [toggleMenu, setToggleMenu] = useState(false)
   const catId = parseInt(useParams().id)
+  
   const [sort, setSort] = useState(null)
   return (
       <div className='products-content'>
         <div className='content-top'>
           <div className='content-open'>
-            <div className='open-btn' onClick={()=>setToggleMenu(!toggleMenu)}><FormatListBulletedIcon /></div>
+            {/* <div className='open-btn' onClick={()=>setToggleMenu(!toggleMenu)}><FormatListBulletedIcon /></div> */}
             
             <div>Open filters</div>
           </div>
           <div className='content-top-title'>Category List</div>
         </div>
 
-        { toggleMenu && 
+        {/* { toggleMenu && 
           <div className='products-filter-menu'>    
           <div className='menu-filter'>
             <p className='filter-title'>Color Filter</p>
@@ -78,10 +79,10 @@ const Products = () => {
           </div>
           </div>
         </div>
-        }
+        } */}
 
         <div className='content-bottom'>
-          list component will add.
+          
            <ProductList catId={catId} sort={sort} /> 
         </div>
       </div> 
