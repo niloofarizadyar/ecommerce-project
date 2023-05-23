@@ -8,10 +8,10 @@ import './navbar.css'
 const Menu =()=>{
   return(
   <div className='menu-container-category'>
-    <div className='menu-item-category'><Link to='/products/1'>Surface</Link></div>
-    <div className='menu-item-category'><Link to='/products/2'>Comfort</Link></div>
-    <div className='menu-item-category'><Link to='/products/3'>Lighting</Link></div>
-    <div className='menu-item-category'><Link to='/products/4'>Storage</Link></div>
+    <div className='menu-item-category'><Link to='/products/0'>Surface</Link></div>
+    <div className='menu-item-category'><Link to='/products/1'>Comfort</Link></div>
+    <div className='menu-item-category'><Link to='/products/2'>Lighting</Link></div>
+    <div className='menu-item-category'><Link to='/products/3'>Storage</Link></div>
   </div>
   )
   

@@ -10,7 +10,7 @@ const FeaturedProducts = () => {
         axios.get('https://ecommerce-project-f8fc5-default-rtdb.europe-west1.firebasedatabase.app/products.json').
         then(res => setData(res.data)).catch(err => console.log(err))
     },[])
-    console.log(data)
+    
   return (
     <div className='featured-products'>
         <div className='featured-products-top'>
