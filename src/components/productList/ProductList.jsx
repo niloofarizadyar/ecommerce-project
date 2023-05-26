@@ -15,9 +15,9 @@ const ProductList = ({catId, query}) => {
   },[])
 
   const search = (items) => {
-    return items.filter((item) => (item.category == category && keys.some(key => item[key].toLowerCase().toString().includes(query))))
+    return items.filter((item) => (item.category == category && keys.some(key => item[key].toLowerCase().includes(query))))
   }
-  console.log(search(data).length)
+  
   return (
     <div className='product-list'>
       {

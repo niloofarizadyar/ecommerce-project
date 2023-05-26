@@ -30,6 +30,9 @@
 .cart-item-price{
     font-weight: bold;
 }
+.cart-item-delete-icon{
+    cursor: pointer;
+}
 .cart-total{
     font-weight: bold;
     padding: 10px;

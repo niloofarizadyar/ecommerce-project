@@ -1,13 +1,16 @@
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom';
-import Storage from './../../assets/storage.jpg'
+import { useDispatch } from 'react-redux';
 import './product.css'
+import { addToCart } from '../../redux/CartReducer';
 
 const Product = () => {
   const [count, setCount] = useState(1)
   const product_id = parseInt(useParams().id)
   const [data,setData] = useState(null)
+
+  const dispatch = useDispatch()
 
   useEffect(()=>{
       axios.get('https://ecommerce-project-f8fc5-default-rtdb.europe-west1.firebasedatabase.app/products.json').
@@ -31,7 +34,14 @@ const Product = () => {
           <p className='count-num'>{count}</p>
           <button className='count-btn' onClick={()=>(setCount((prevState)=>prevState + 1))}>+</button>
         </div>
-        <button className='add-to-card-btn'>ADD TO CARD</button>
+        <button className='add-to-card-btn' onClick={()=>dispatch(addToCart({
+          id:data.id,
+          title: data.title,
+          description:data.description,
+          img:data.img,
+          price:data.price,
+          count
+        }))}>ADD TO CARD</button>
       </div>
     </div>
   )

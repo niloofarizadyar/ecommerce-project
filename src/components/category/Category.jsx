@@ -1,13 +1,10 @@
 import React,{useState,useEffect} from 'react'
-import Comfort from './../../assets/comfort.jpg'
-import Storage from './../../assets/storage.jpg'
-import Lighting from './../../assets/lighting.jpg'
-import Surface from './../../assets/surface.jpg'
 import axios from 'axios'
 import './category.css'
 import { Link } from 'react-router-dom'
 
 const Category = () => {
+
     const [data,setData] = useState(null)
     useEffect(()=>{
         axios.get('https://ecommerce-project-f8fc5-default-rtdb.europe-west1.firebasedatabase.app/categories.json').
@@ -18,7 +15,6 @@ const Category = () => {
     return (
         
         <div className='category'>
-            
             <div className='category-row'>
                 <div className='category-col'>
                     <img className='category-image' src={data[0].img} />

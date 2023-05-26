@@ -9,7 +9,7 @@ const Card = ({item}) => {
         <img className='image-box' src={item.img} />
         <div className='card-container'>
           <h3>{item.title}</h3>
-          <p>{item.description}</p>
+          <p>{item.description.substring(0,50)}</p>
           <p>Price : {item.price}</p></div>
       </Link>
     </div>

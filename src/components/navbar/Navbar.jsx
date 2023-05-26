@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { useSelector } from 'react-redux';
 import ChairRoundedIcon from '@mui/icons-material/ChairRounded';
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import {Cart} from './../../components'
@@ -20,6 +21,7 @@ const Menu =()=>{
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false)
   const [toggleCart, setToggleCart] = useState(false)
+  const products = useSelector((state) => state.cart.products)
 
   return (
     <div className="navbar">
@@ -43,7 +45,7 @@ const Navbar = () => {
         <div className='navbar-right-container'>
           <div className='navbar-cart-active' onClick={()=>setToggleCart(!toggleCart)}>
             <ShoppingCartOutlinedIcon />
-            <span>1</span>
+            <span>{products.length}</span>
             { toggleCart && <div className='navbar-cart'>
                 <Cart />
               </div>
