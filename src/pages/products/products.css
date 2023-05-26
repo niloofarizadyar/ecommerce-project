@@ -20,9 +20,11 @@
     align-items: center;
     
 }
-.open-btn{
-    cursor: pointer;
+.search-icon{
     margin-right: 10px;
+}
+.search-input{
+    padding: 10px;
 }
 .content-top-title{
     font-weight: bold;

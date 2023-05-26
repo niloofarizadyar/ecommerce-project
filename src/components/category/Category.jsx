@@ -13,7 +13,7 @@ const Category = () => {
         axios.get('https://ecommerce-project-f8fc5-default-rtdb.europe-west1.firebasedatabase.app/categories.json').
         then(res => setData(res.data)).catch(err => console.log(err))
     },[])
-    console.log(data)
+    
     if(data == null){return(<p className='category-loading'>Loading</p>)}
     return (
         

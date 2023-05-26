@@ -1,22 +1,23 @@
 import React,{ useState } from 'react'
 import { useParams } from 'react-router-dom';
-import FormatListBulletedIcon from '@mui/icons-material/FormatListBulleted';
 import { ProductList } from './../../components'
+import SearchIcon from '@mui/icons-material/Search';
 import './products.css'
 
 
 const Products = () => {
-  // const [toggleMenu, setToggleMenu] = useState(false)
+  const [query, setQuery] = useState("")
   const catId = parseInt(useParams().id)
   
   const [sort, setSort] = useState(null)
+  
   return (
       <div className='products-content'>
         <div className='content-top'>
           <div className='content-open'>
-            {/* <div className='open-btn' onClick={()=>setToggleMenu(!toggleMenu)}><FormatListBulletedIcon /></div> */}
-            
-            <div>Open filters</div>
+            <div className='search-icon'><SearchIcon /></div>
+            {/* <div>Search</div> */}
+            <input type='search' placeholder='Search...' className='search-input' onChange={(e)=>setQuery(e.target.value)} />
           </div>
           <div className='content-top-title'>Category List</div>
         </div>
@@ -83,7 +84,7 @@ const Products = () => {
 
         <div className='content-bottom'>
           
-           <ProductList catId={catId} sort={sort} /> 
+           <ProductList catId={catId} query={query} /> 
         </div>
       </div> 
   )
